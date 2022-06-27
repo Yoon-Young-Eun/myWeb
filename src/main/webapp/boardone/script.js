@@ -21,6 +21,7 @@ function writeSave(){
 		return false;
 	}
 	
+	
 		if(document.writeForm.content.value==""){
 		alert("내용을 입력하십시오.");
 		document.writeForm.content.focus();
