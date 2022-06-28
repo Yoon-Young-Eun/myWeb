@@ -13,7 +13,8 @@ public class BoardVO {
 		private int ref;
 		private int step;
 		private int depth;
-		private Timestamp regdate;
+		private Timestamp regdate; 
+		//현재 타임 얻기, 밀리초단위, System클래의 currentTimeMillis()메소드 사용
 		private String content;
 		private String ip;
 		

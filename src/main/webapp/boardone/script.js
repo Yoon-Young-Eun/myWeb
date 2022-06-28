@@ -10,14 +10,14 @@ function writeSave(){
 		if(document.writeForm.email.value==""){
 		alert("이메일을 입력하십시오.");
 		document.writeForm.email.focus();
-			console.log("3");
+			console.log("2");
 		return false;
 	}
 	
 		if(document.writeForm.subject.value==""){
 		alert("제목을 입력하십시오.");
 		document.writeForm.subject.focus();
-			console.log("2");
+			console.log("3");
 		return false;
 	}
 	

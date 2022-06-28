@@ -11,7 +11,7 @@
 </script>
 </head>
 
-<!--  // 나중에 새글 답변글 구분하는 코드 추가<1> -->
+<!--  //새글 답변글 구분하는 코드 -->
 <%
 int num=0, ref=1, step=0, depth=0;
 try{
@@ -22,13 +22,12 @@ try{
 	   depth=Integer.parseInt(request.getParameter("depth"));
  }
 %>
-
-<!--  // 나중에 새글 답변글 구분하는 코드 추가<1> -->
+<!--  //새글 답변글 구분하는 코드-->
 
 <body bgcolor="<%=bodyback_c %>">
 <center><b>글쓰기</b></center><br></br>
 <form method ="post" name="writeForm" action ="writeProc.jsp" onsubmit="return writeSave()">
-<input type="hidden" name="num" value="<%=num %>">
+<input type="hidden" name="num" value="<%=num %>"> 
 <input type="hidden" name="ref" value="<%=ref %>">
 <input type="hidden" name="step" value="<%=step %>">
 <input type="hidden" name="depth" value="<%=depth%>">
