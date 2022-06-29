@@ -10,7 +10,7 @@
 <%
  article.setRegdate(new Timestamp(System.currentTimeMillis()));
  article.setIp(request.getRemoteAddr());
- BoardDAO dbPro = BoardDAO.getInstance();
+ BoardDAO dbPro = BoardDAO.getInstance(); 
  dbPro.insertArticle(article);
  response.sendRedirect("list.jsp");
 
