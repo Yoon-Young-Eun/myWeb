@@ -133,6 +133,14 @@
 	</error-page>
 	 -->
 	 
+	 <jsp-config>
+	    <taglib>
+	    <taglib-uri>/WEB-INF/tlds/el-functions.tld</taglib-uri>  <!-- <taglib-uri>jsp에서 해당 태그라이브러리를 참조할대 사용하는 식별자 -->
+	    <taglib-location>/WEB-INF/tlds/el-functions.tld</taglib-location><!-- 태그라이브러리를 기술한 TLD 파일의 위치 -->
+	    </taglib>
+	 </jsp-config>
+	 
+	 
 	<error-page>
 	    <exception-type>java.lang.NullPointerException</exception-type>
 	    <location>/error/errorNullPointer.jsp</location>
