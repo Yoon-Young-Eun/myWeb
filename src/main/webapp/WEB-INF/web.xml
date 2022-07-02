@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee; http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
 	<display-name>myWeb</display-name>
 	<welcome-file-list>
@@ -114,6 +114,26 @@
 		<url-pattern>/Logout</url-pattern>
 	</servlet-mapping>
 	
+	
+    <servlet>
+		<servlet-name>controlOne</servlet-name>
+		<servlet-class>tommy.mvc.control.ControlServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>controlOne</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myControl</servlet-name>
+		<servlet-class>tommy.mvcMem.control.ControlServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myControl</servlet-name>
+		<url-pattern>*.mdo</url-pattern>
+	</servlet-mapping>
+	
+	
 	<resource-ref>
 		<description>ConnectionPool</description>
 		<res-ref-name>jdbc/myOracle</res-ref-name>
@@ -145,5 +165,7 @@
 	    <exception-type>java.lang.NullPointerException</exception-type>
 	    <location>/error/errorNullPointer.jsp</location>
 	</error-page>
+	
+	
 
 </web-app>

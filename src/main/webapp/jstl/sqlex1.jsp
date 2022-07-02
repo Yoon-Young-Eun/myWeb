@@ -24,7 +24,7 @@ select * from tempmember
   <c:forEach var="row" items ="${rs.rowsByIndex}">
   <tr>
     <%-- 레코드의 필드수 만큼 반복한다. --%>
-    <c:forEach var="column" items="${row}" varStatus="i">
+    <c:forEach var="column" items="${row}" varStatus="i"> <%--1{status.index} 0부터의 순서 --%>
     <td>
        <c:if test="${column != null}"><%--해당 필드값이 null이 아니면 --%>
        <c:out value ="${column }"/>
