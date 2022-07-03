@@ -168,12 +168,12 @@ public class StudentDAO {
 		  pstmt.setString(1, id);
 		  rs = pstmt.executeQuery();
 		  
-		  if(rs.next())
+		  if(rs.next()) {
 			  if(rs.getString("pass").equals(pass))
 				  result = 1; //로그인 성공
 			  else 
 				  result = 0; //로그인 실패
-	  
+		  }
   }catch(SQLException e) {
 	  e.printStackTrace();
   }finally {
@@ -238,11 +238,11 @@ public class StudentDAO {
 			  vo.setName(rs.getString("name"));
 			  vo.setPhone1(rs.getString("Phone1"));
 			  vo.setPhone2(rs.getString("Phone2"));
-			  vo.setPhone2(rs.getString("Phone3"));
+			  vo.setPhone3(rs.getString("Phone3"));
 			  vo.setEmail(rs.getString("email"));
 			  vo.setZipcode(rs.getString("zipcode"));
 			  vo.setAddress1(rs.getString("address1"));
-			  vo.setAddress2(rs.getString("addtess2"));
+			  vo.setAddress2(rs.getString("address2"));
 		  }
 	  }catch(SQLException e) {
 		  e.printStackTrace();

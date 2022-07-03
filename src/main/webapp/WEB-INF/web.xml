@@ -114,7 +114,7 @@
 		<url-pattern>/Logout</url-pattern>
 	</servlet-mapping>
 	
-	
+	<!-- 
     <servlet>
 		<servlet-name>controlOne</servlet-name>
 		<servlet-class>tommy.mvc.control.ControlServlet</servlet-class>
@@ -123,6 +123,7 @@
 		<servlet-name>controlOne</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
+	 -->
 	
 	<servlet>
 		<servlet-name>myControl</servlet-name>
@@ -132,6 +133,20 @@
 		<servlet-name>myControl</servlet-name>
 		<url-pattern>*.mdo</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+	  <servlet-name>ControllerURI</servlet-name>
+	  <servlet-class>tommy.mvc.test.Controller</servlet-class>
+	  <init-param>
+	    <param-name>propertyConfig</param-name>
+	    <param-value>Command.properties</param-value>
+	  </init-param>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>ControllerURI</servlet-name>
+	  <url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
 	
 	
 	<resource-ref>
